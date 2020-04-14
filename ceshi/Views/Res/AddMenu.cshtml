@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "AddMenu";
+    Layout = "~/Views/layout.cshtml";
+}
+
+<div class="tab-pane active" id="widget_tab1">
+    <table class="formtab_user">
+        <tr>
+            <td>菜单名称</td>
+            <td><input id="txtResName" name="txtResName" type="text" class="input-large" value="@ViewBag.Menu.ResName" /></td>
+        </tr>
+        <tr>
+            <td>父级菜单</td>
+            <td>
+                <select id="ddlParentNum" name="ddlParentNum" class="input-large" style="width:220px;">
+                    @Html.Raw(ViewBag.RoleList)
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>排序</td>
+            <td><input id="txtSort" name="txtSort" type="text" class="input-large" value="@ViewBag.Menu.Sort" /></td>
+        </tr>
+        <tr>
+            <td>链接地址</td>
+            <td><input id="txtUrl" name="txtUrl" type="text" class="input-large" value="@ViewBag.Menu.Url" /></td>
+        </tr>
+        <tr>
+            <td>样式</td>
+            <td><input id="txtCssName" name="txtCssName" type="text" class="input-large" value="@ViewBag.Menu.CssName" /></td>
+        </tr>
+        <tr>
+            <td>菜单类型</td>
+            <td>
+                <select id="ddlResType" name="ddlResType" class="input-large" style="width:220px;">
+                    @Html.Raw(ViewBag.ResourceType)
+                </select>
+            </td>
+        </tr>
+    </table>
+</div>
+
